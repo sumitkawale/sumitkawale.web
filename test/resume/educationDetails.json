@@ -1,0 +1,22 @@
+[
+	{
+		"course": "Bachelor of Engineering (B.E)",
+		"college": "Pune Institute Of Computer Technology",
+		"branch": "Information Technology",
+		"year": "2021 - 2024"
+	},
+	{
+		"course": "Diploma (MSBTE)",
+		"college": "Vidya Pratishthan's Polytechnic College",
+		"branch": "Computer Science & Engineering",
+		"year": "2018 - 2021",
+		"percentage": "95.43%"
+	},
+	{
+		"course": "(SSC board)",
+		"college": "Mahatma Gandhi Vidyalay Paranda, Osmanabad, Maharashtra",
+		"branch": "Secondary (X)",
+		"year": "2018",
+		"percentage": "72.80%"
+	}
+]
