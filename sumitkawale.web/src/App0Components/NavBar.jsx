@@ -20,10 +20,10 @@ const NavBar = () => <nav id="navbar">
         {/* <img src={SKlogo} alt="logo" /> */}
     </a>
     <ul>
-        <li><a href={"#1"}>About</a></li>
-        <li><a href={"#2"}>Projects</a></li>
-        <li><a href={"#3"}>Blogs</a></li>
-        <li><a href={"#4"}>Contact</a></li>
+        <li><a href={"#about"}>About</a></li>
+        <li><a href={"#projects"}>Projects</a></li>
+        <li><a href={"#blogs"}>Blogs</a></li>
+        <li><a href={"#contact"}>Contact</a></li>
     </ul>
 </nav>
 
