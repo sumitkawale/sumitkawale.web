@@ -1,5 +1,6 @@
 import React from "react";
-import SKlogo from "../media/SKlogo.png"
+
+// import SKlogo from "../media/SKlogo.png"
 import "../App0Style/NavBar.css"
 
 // const scrolll = (to, e) => {
@@ -13,7 +14,7 @@ import "../App0Style/NavBar.css"
 //     </>
 // }
 
-let NavBar = () => <nav id="navbar">
+const NavBar = () => <nav id="navbar">
     <a href="/">
         SK
         {/* <img src={SKlogo} alt="logo" /> */}
