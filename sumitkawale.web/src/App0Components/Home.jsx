@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Typewriter from 'typewriter-effect/dist/core';
 
 import "../App0Style/Home.css"
 import gif from "../media/developer-developers.gif"
