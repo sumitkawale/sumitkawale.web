@@ -1,0 +1,10 @@
+#content {
+    transform: translateY(-300px);
+}
+
+@media (max-width:1000px) {
+    #content {
+        transform: translateY(-100px);
+    }
+
+}
