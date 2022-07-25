@@ -7,7 +7,7 @@
     justify-content : space-around;
     z-index         : 10;
     font-weight     : 600;
-    position        : sticky;
+    position        : fixed;
     top             : 0;
     user-select     : none;
 }
@@ -53,26 +53,4 @@
 #navbar ul li a:hover {
     background-color: #323330;
     color           : #f7df1e;
-}
-
-@media (max-width:600px) {
-    #navbar a {
-        font-size: 1.7em;
-    }
-
-    #navbar ul li a {
-        font-size: 1.2em;
-        padding  : 5px;
-    }
-}
-
-@media (max-width:400px) {
-    #navbar a {
-        font-size: 1.7em;
-    }
-
-    #navbar ul li a {
-        font-size: 1em;
-        padding  : 3px;
-    }
 }

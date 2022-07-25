@@ -44,6 +44,12 @@ function a11yProps(index) {
 }
 ////////////////////////////////////
 
+const AboutSelf = () => {
+    return <>
+        <h2>Sumit Uttamrao Kawale</h2>
+    </>
+}
+
 let About = () => {
 
     const [value, setValue] = React.useState(0);
@@ -52,12 +58,11 @@ let About = () => {
         setValue(newValue);
     };
 
-    return <div id="aboutParent">
-        <h2>About my</h2>
-        <br />
+    return <div id="aboutParent" style={{ paddingTop: "80px" }}>
+        <h1>About my <span></span><span></span></h1>
         <div id="about">
-            <img id='skImage' src={SKme} alt="My Photo" />
-            <div>
+            <img class='skImage' src={SKme} alt="My Pic" />
+            <div class="aboutTabs">
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                         <Tab label="Self" {...a11yProps(0)} />
@@ -68,7 +73,7 @@ let About = () => {
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
-                    Self
+                    <AboutSelf />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     Education
