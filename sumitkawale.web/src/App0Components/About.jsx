@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import "../App0Style/About.css"
-import SKme from "../media/SKme.jpg"
+import SKme from "../media/SKme2.jpg"
 
 //////////////////////////////////////
 import PropTypes from 'prop-types';

@@ -3,14 +3,14 @@ import React from "react";
 // import SKlogo from "../media/SKlogo.png"
 import "../App0Style/NavBar.css"
 
-const scrolll = (to, e) => {
+const scroll = (to, e) => {
     let a = document.getElementById(to)
     a.scrollIntoView({ behavior: "smooth" })
 }
 
 const ScrollLink = (props) => {
     return <>
-        <a onClick={e => scrolll(props.to, e)}>{props.children}</a>
+        <a onClick={e => scroll(props.to, e)} href>{props.children}</a>
     </>
 }
 
