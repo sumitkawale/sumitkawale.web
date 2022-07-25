@@ -38,12 +38,12 @@
     justify-content: space-evenly;
     flex-wrap      : wrap;
     align-items    : stretch;
-
+    margin-top     : 10px;
 }
 
 #about .skImage {
     width        : 30vw;
-    border       : 3px solid #f7de1e78;
+    border       : 2px solid #f7de1e4e;
     padding      : 1px;
     border-radius: 15px;
     margin       : 30px 0;
@@ -51,5 +51,24 @@
 }
 
 #about .aboutTabs {
+    width : 60vw;
     margin: 30px 0;
 }
+
+#self {
+    font-family: "Nunito";
+}
+
+#self h2 {
+    font-size: 2em;
+}
+
+#self h5 {
+    color           : #323330;
+    background-color: #f7df1e;
+    display         : inline-block;
+    border-radius   : 3px;
+    padding         : 3px 5px;
+}
+
+#self p {}

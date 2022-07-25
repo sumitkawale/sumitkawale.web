@@ -45,9 +45,13 @@ function a11yProps(index) {
 ////////////////////////////////////
 
 const AboutSelf = () => {
-    return <>
+    return <div id='self'>
         <h2>Sumit Uttamrao Kawale</h2>
-    </>
+        <h5>#full-stack-developer #frontend #backend </h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam facere cumque harum inventore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam facere cumque harum inventore.</p>
+        <h3>Age: 21</h3>
+        <h3>Education: B.E in Information Technology (Pursuing)</h3>
+    </div>
 }
 
 let About = () => {
