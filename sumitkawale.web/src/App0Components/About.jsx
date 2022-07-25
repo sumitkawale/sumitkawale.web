@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import "../App0Style/About.css"
 import SKme from "../media/SKme.jpg"
@@ -46,12 +47,20 @@ function a11yProps(index) {
 
 const AboutSelf = () => {
     return <div id='self'>
-        <h2>Sumit Uttamrao Kawale</h2>
+        <h2>I'm Sumit Uttamrao Kawale.</h2>
         <h5>#full-stack-developer #frontend #backend </h5>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam facere cumque harum inventore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam facere cumque harum inventore.</p>
-        <h3>Age: 21</h3>
-        <h3>Education: B.E in Information Technology (Pursuing)</h3>
-    </div>
+        <p>
+            I'm Studying in B.E 2<sup>nd</sup> year of Engineering in IT department in <abbr title={"Pune Institute Of Computer Technology"}>PICT</abbr>.
+            <br />
+            Currently I'm working in <b>Shivankit TechSolutions</b> as Web Developer intern.
+            <br />
+            <br />
+            <strong>I'm Highly Intrusted in JavaScript</strong>, I want to be professional in JavaScript development and some of its frameworks
+        </p>
+        <h3>I'm 21 years young</h3>
+        <br />
+        <Link to={"/resume"}>View My RESUME</Link>
+    </div >
 }
 
 let About = () => {

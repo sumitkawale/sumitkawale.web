@@ -17,7 +17,7 @@
     background-color: #f7df1e;
     height          : 2px;
     position        : absolute;
-    left            : 25%;
+    left            : 20%;
     right           : 60%;
     top             : 53%;
 }
@@ -28,16 +28,15 @@
     height          : 3px;
     position        : absolute;
     left            : 60%;
-    right           : 25%;
+    right           : 20%;
     top             : 53%;
-
 }
 
 #about {
     display        : flex;
     justify-content: space-evenly;
     flex-wrap      : wrap;
-    align-items    : stretch;
+    align-items    : flex-start;
     margin-top     : 10px;
 }
 
@@ -63,12 +62,31 @@
     font-size: 2em;
 }
 
+#self h3 {
+    padding-bottom: 20px;
+    border-bottom : 2px solid #3233301b;
+}
+
 #self h5 {
     color           : #323330;
-    background-color: #f7df1e;
+    background-color: #f7de1e51;
+    font-family     : "Roboto Mono";
     display         : inline-block;
     border-radius   : 3px;
     padding         : 3px 5px;
+    font-size       : 0.688em;
 }
 
-#self p {}
+#self p {
+    font-size: 1.1em;
+    margin   : 10px 0;
+}
+
+#self a {
+    text-decoration : none;
+    background-color: #f7df1e;
+    color           : #323330;
+    font-weight     : 900;
+    padding         : 15px 18px;
+    border-radius   : 10px;
+}
