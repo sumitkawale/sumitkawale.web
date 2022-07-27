@@ -15,6 +15,7 @@
 
 #home .text {
     text-align: center;
+    transform : translateY(50px);
 }
 
 #home .text h2 {
@@ -29,8 +30,17 @@
     font-size: 2em;
 }
 
-#home img {
+#home .gif {
     mix-blend-mode: darken;
+}
+
+#home .socialMedia {
+    padding-top: 30px;
+}
+
+#home .socialMedia a img {
+    width         : 50px;
+    margin        : 0 25px;
 }
 
 
