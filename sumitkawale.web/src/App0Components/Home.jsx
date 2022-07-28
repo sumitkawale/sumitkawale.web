@@ -14,7 +14,7 @@ const Home = () => {
         <div className="text">
             <h2>Hi, I'm Sumit,</h2>
             <h3>I'm web developer</h3>
-            <h4>I design & code beautifully simple things and love what I do.</h4>
+            <h4>I design & code passionately and I love what I do.</h4>{/* I design & code beautifully simple things and love what I do. */}
             <div className="socialMedia">
                 <a href="https://github.com/sumitkawale" target={"_blank"} rel="noreferrer"><img src={github} alt="github_icon" /></a>
                 <a href="https://www.linkedin.com/in/sumit-kawale/" target={"_blank"} rel="noreferrer"><img src={linkedin} alt="linkedin_icon" /></a>
