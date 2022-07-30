@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 import "../App0Style/About.css"
 import SKme from "../media/SKme.jpg"
@@ -53,6 +53,9 @@ function a11yProps(index) {
 
 let About = () => {
 
+    useEffect(()=>{
+    }, [])
+
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -62,7 +65,7 @@ let About = () => {
     let aboutData = useContext(AboutDataContext)
 
     return <div id="aboutParent" style={{ paddingTop: "80px" }}>
-        <h1>About my <span></span><span></span></h1>
+        <h1 id='aboutTitle'>About my <span></span><span></span></h1>
         <div id="about">
             <img class='skImage' src={SKme} alt="My Pic" />
             <div class="aboutTabs">

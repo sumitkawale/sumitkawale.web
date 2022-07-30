@@ -10,7 +10,7 @@ const scroll = (to, e) => {
 
 const ScrollLink = (props) => {
     return <>
-        <a onClick={e => scroll(props.to, e)} href>{props.children}</a>
+        <a className="animate" onClick={e => scroll(props.to, e)} href>{props.children}</a>
     </>
 }
 
@@ -19,7 +19,7 @@ const gotoTop = e => {
 }
 
 const NavBar = () => <nav id="navbar">
-    <a href onClick={gotoTop}>
+    <a className="animate" href onClick={gotoTop}>
         SK
         {/* <img src={SKlogo} alt="logo" /> */}
     </a>

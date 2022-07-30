@@ -16,13 +16,70 @@ let AboutDataContext = createContext()
 
 export { AboutDataContext }
 
+const defaultAboutData = {
+    self: {
+        nextHashTags: " #javascript ",
+        studyingInYear: "3<sup>rd</sup>",
+        workingIn: "Shivankit TechSolutions",
+        workingAs: "Web Developer intern",
+        beComplete: false
+    },
+    education: [
+        {
+            id: "pict",
+            logo: "/media/pictLogo.png",
+            clg: "SCTR's Pune Institute Of Computer Technology, Pune",
+            link: "https://pict.edu",
+            courseDetail: "(B.E)",
+            branch: "Information Technology",
+            from: "2021",
+            to: "2024",
+            status: "pursuing",
+            grade: "",
+            logoTxt: "PICT",
+            alt: "PICT_LOGO"
+        },
+        {
+            id: "vpp",
+            logo: "/media/vppLogo.png",
+            clg: "Vidya Prathishthan's Polytechnic College, Indapur",
+            link: "https://www.vppolytechnic.org",
+            courseDetail: "(MSBTE)",
+            branch: "Computer Engineering",
+            from: "2018",
+            to: "2021",
+            status: "completed",
+            grade: "95.43%",
+            logoTxt: "VPP",
+            alt: "VPP_LOGO"
+        },
+        {
+            id: "mgm",
+            logo: "/media/mgmLogo.png",
+            clg: "Mahatma Gandhi Vidyalay, Paranda, Osmanabad",
+            link: "#",
+            courseDetail: "(SSC)",
+            branch: "10th",
+            from: "2015",
+            to: "2018",
+            status: "completed",
+            grade: "73%",
+            logoTxt: "MGM",
+            alt: "MGM_LOGO"
+        }
+    ],
+    currentStatus: {
+
+    }
+}
+
 export default function App() {
-    const [aboutData, updateAboutData] = useState({})
+    const [aboutData, updateAboutData] = useState(defaultAboutData)
     useEffect(() => {
         fetch("http://localhost:3030/about")
             .then(d => d.json())
             .then(d => { /* console.log(d); */ updateAboutData(d); })
-            .catch(e => console.warn(e))
+            .catch(e => updateAboutData(defaultAboutData))
     }, [])
 
     return <>

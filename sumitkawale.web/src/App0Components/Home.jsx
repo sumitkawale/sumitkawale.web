@@ -9,21 +9,44 @@ import instagram from "../media/instagram.svg"
 import linkedin from "../media/linkedin.svg"
 import twitter from "../media/twitter.svg"
 
+window.addEventListener("load", (e) => {
+    const elements = document.querySelectorAll(".animateText")
+    elements.forEach(element => {
+        const letters = element.innerHTML.split("")
+        element.innerHTML = ""
+        letters.map(l => {
+            let span = document.createElement("span")
+            span.className = "animateLetter animate"
+            span.innerHTML = l == " " ? "&nbsp" : l
+            element.appendChild(span)
+        })
+    });
+})
+
 const Home = () => {
     return <div id="home">
         <div className="text">
-            <h2>Hi, I'm Sumit,</h2>
-            <h3>I'm web developer</h3>
-            <h4>I design & code passionately and I love what I do.</h4>{/* I design & code beautifully simple things and love what I do. */}
+            <h2 className="animateText">Hi, I'm Sumit,</h2>
+            <h3 className="animateText">I'm web developer</h3>
+            <h4 className="animateText">I design & code passionately and I love what I do.</h4>{/* I design & code beautifully simple things and love what I do. */}
             <div className="socialMedia">
-                <a href="https://github.com/sumitkawale" target={"_blank"} rel="noreferrer"><img src={github} alt="github_icon" /></a>
-                <a href="https://www.linkedin.com/in/sumit-kawale/" target={"_blank"} rel="noreferrer"><img src={linkedin} alt="linkedin_icon" /></a>
-                <a href="https://twitter.com/SumitKawale18/" target={"_blank"} rel="noreferrer"><img src={twitter} alt="twitter_icon" /></a>
-                <a href="https://discord.com/users/sumitkawale#7825" target={"_blank"} rel="noreferrer"><img src={discord} alt="discord_icon" /></a>
-                <a href="https://www.instagram.com/sumitkawale1/" target={"_blank"} rel="noreferrer"><img src={instagram} alt="instagram_icon" /></a>
+                <a href="https://github.com/sumitkawale" target={"_blank"} rel="noreferrer">
+                    <img className="animateLetter animate" src={github} alt="github_icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/sumit-kawale/" target={"_blank"} rel="noreferrer">
+                    <img className="animateLetter animate" src={linkedin} alt="linkedin_icon" />
+                </a>
+                <a href="https://twitter.com/SumitKawale18/" target={"_blank"} rel="noreferrer">
+                    <img className="animateLetter animate" src={twitter} alt="twitter_icon" />
+                </a>
+                <a href="https://discord.com/users/sumitkawale#7825" target={"_blank"} rel="noreferrer">
+                    <img className="animateLetter animate" src={discord} alt="discord_icon" />
+                </a>
+                <a href="https://www.instagram.com/sumitkawale1/" target={"_blank"} rel="noreferrer">
+                    <img className="animateLetter animate" src={instagram} alt="instagram_icon" />
+                </a>
             </div>
         </div>
-
         <img className="gif" src={gif} alt="gif" />
     </div>
 }
