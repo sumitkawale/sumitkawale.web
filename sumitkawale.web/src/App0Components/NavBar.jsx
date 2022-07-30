@@ -14,8 +14,12 @@ const ScrollLink = (props) => {
     </>
 }
 
+const gotoTop = e => {
+    window.scrollBy(0, -100000000000)
+}
+
 const NavBar = () => <nav id="navbar">
-    <a href="/">
+    <a href onClick={gotoTop}>
         SK
         {/* <img src={SKlogo} alt="logo" /> */}
     </a>

@@ -54,20 +54,22 @@
     margin: 30px 0;
 }
 
-#self {
+/* ///////////////////////////////////self - start/////////////////////////////////// */
+
+#about #self {
     font-family: "Nunito";
 }
 
-#self h2 {
+#about h2 {
     font-size: 2em;
 }
 
-#self h3 {
+#about #self h3 {
     padding-bottom: 20px;
     border-bottom : 2px solid #3233301b;
 }
 
-#self h5 {
+#about #self h5 {
     color           : #323330;
     background-color: #f7de1e51;
     font-family     : "Roboto Mono";
@@ -77,12 +79,12 @@
     font-size       : 0.688em;
 }
 
-#self p {
+#about p {
     font-size: 1.1em;
     margin   : 10px 0;
 }
 
-#self a {
+#about #self a {
     text-decoration : none;
     background-color: #f7df1e;
     color           : #323330;
@@ -90,3 +92,52 @@
     padding         : 15px 18px;
     border-radius   : 10px;
 }
+
+/* ///////////////////////////////////self - end/////////////////////////////////// */
+
+/* ///////////////////////////////////education - start/////////////////////////////////// */
+
+#about #education {
+    font-family: "Nunito";
+}
+
+#about #education .educationCard {
+    border         : 2px solid #32333022;
+    border-radius  : 10px;
+    padding        : 20px;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-around;
+    align-items    : flex-start;
+    margin         : 10px 0;
+}
+
+#about #education .educationCard .avatar {
+    display   : inline-block;
+    min-width : 70;
+    min-height: 70;
+}
+
+#about #education .educationCard h2 {
+    border-bottom : 2px solid #32333011;
+    padding-bottom: 10px;
+    margin-bottom : 10px;
+    font-size     : 1.5em;
+    max-width: 600px;
+}
+
+#about #education .educationCard h3 {
+    font-weight: normal;
+}
+
+#about #education .educationCard .date {
+    color  : #32333088;
+    padding: 0;
+    margin : 0;
+}
+
+#about #education .educationCard .other {
+    margin-top: 0;
+}
+
+/* ///////////////////////////////////education - end/////////////////////////////////// */

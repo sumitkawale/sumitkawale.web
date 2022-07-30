@@ -20,6 +20,7 @@
     align-items    : center;
     font-size      : 3.3em;
     margin-left    : 5px;
+    cursor         : pointer;
 }
 
 #navbar a img {

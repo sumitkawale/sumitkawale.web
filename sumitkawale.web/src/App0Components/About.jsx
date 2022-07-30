@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import "../App0Style/About.css"
 import SKme from "../media/SKme.jpg"
@@ -10,6 +9,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+
+import AboutSelf from './AboutComponents/Self'
+import Education from './AboutComponents/Education'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -45,24 +47,6 @@ function a11yProps(index) {
 }
 ////////////////////////////////////
 
-const AboutSelf = () => {
-    return <div id='self'>
-        <h2>I'm Sumit Uttamrao Kawale.</h2>
-        <h5>#full-stack-developer #frontend #backend </h5>
-        <p>
-            I'm Studying in B.E 3<sup>rd</sup> year of Engineering in IT department in <abbr title={"Pune Institute Of Computer Technology"}>PICT</abbr>.
-            <br />
-            Currently I'm working in <b>Shivankit TechSolutions</b> as Web Developer intern.
-            <br />
-            <br />
-            <strong>I'm Highly Interested in JavaScript</strong>, I want to be professional in JavaScript development and some of its frameworks
-        </p>
-        <h3>I'm 21 years young</h3>
-        <br />
-        <Link to={"/resume"}>View My RESUME</Link>
-    </div >
-}
-
 let About = () => {
 
     const [value, setValue] = React.useState(0);
@@ -89,7 +73,7 @@ let About = () => {
                     <AboutSelf />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    Education
+                    <Education />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     Current Status
