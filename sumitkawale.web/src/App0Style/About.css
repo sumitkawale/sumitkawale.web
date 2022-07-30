@@ -38,6 +38,7 @@
     flex-wrap      : wrap;
     align-items    : flex-start;
     margin-top     : 10px;
+    color          : #323330;
 }
 
 #about .skImage {
@@ -58,6 +59,8 @@
 
 #about #self {
     font-family: "Nunito";
+    color      : #323330;
+
 }
 
 #about h2 {
@@ -77,6 +80,7 @@
     border-radius   : 3px;
     padding         : 3px 5px;
     font-size       : 0.688em;
+    margin-bottom   : 10px;
 }
 
 #about p {
@@ -99,6 +103,8 @@
 
 #about #education {
     font-family: "Nunito";
+    color      : #323330;
+
 }
 
 #about #education .educationCard {
@@ -123,7 +129,13 @@
     padding-bottom: 10px;
     margin-bottom : 10px;
     font-size     : 1.5em;
-    max-width: 600px;
+    max-width     : 600px;
+}
+
+#about #education .educationCard h2 a {
+    text-decoration: none;
+    color          : #323330;
+
 }
 
 #about #education .educationCard h3 {
@@ -141,3 +153,51 @@
 }
 
 /* ///////////////////////////////////education - end/////////////////////////////////// */
+
+/* ///////////////////////////////////skills - start/////////////////////////////////// */
+
+#about #skills {}
+
+#about #skills .cards {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: space-around;
+}
+
+#about #skills .cards .card {
+    height       : 200px;
+    width        : 350px;
+    border       : 4px solid #f7df1e33;
+    border-radius: 10px;
+    margin       : 10px;
+}
+
+#about #skills .cards .card h2 {
+    background-color: #f7df1e;
+    color           : #323330;
+    padding         : 10px;
+    border-radius   : 10px 10px 0 0;
+}
+
+#about #skills .cards .card .progress {
+    padding: 10px;
+}
+
+#about #skills .cards .card .progress>span {
+    display      : block;
+    height       : 25px;
+    border-radius: 25px;
+    padding      : 0;
+    border       : 2px solid #32333022;
+}
+
+#about #skills .cards .card .progress span span {
+    display         : block;
+    width           : 50%;
+    height          : 21px;
+    border-radius   : 25px;
+    background-color: #f7df1e;
+}
+
+/* ///////////////////////////////////skills - end/////////////////////////////////// */

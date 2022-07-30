@@ -24,46 +24,63 @@ app.get('/media/*', (req, res) => {
     ps.pipe(res) // <---- this makes a trick with stream error handling
 })
 
-app.get("/education", (req, res, next) => {
-    res.json([
-        {
-            id: "pict",
-            logo: "/media/pictLogo.png",
-            clg: "SCTR's Pune Institute Of Computer Technology, Pune",
-            courseDetail: "(B.E)",
-            branch: "Information Technology",
-            from: "2021",
-            to: "2024",
-            status: "pursuing",
-            grade: "",
-            logoTxt: "PICT",
-            alt: "PICT_LOGO"
-        },
-        {
-            id: "vpp",
-            logo: "/media/vppLogo.png",
-            clg: "Vidya Prathishthan's Polytechnic College, Indapur",
-            courseDetail: "(MSBTE)",
-            branch: "Computer Engineering",
-            from: "2018",
-            to: "2021",
-            status: "completed",
-            grade: "95.43%",
-            logoTxt: "VPP",
-            alt: "VPP_LOGO"
-        },
-        {
-            id: "mgm",
-            logo: "/media/mgmLogo.png",
-            clg: "Mahatma Gandhi Vidyalay, Paranda, Osmanabad",
-            courseDetail: "(SSC)",
-            branch: "10th",
-            from: "2015",
-            to: "2018",
-            status: "completed",
-            grade: "73%",
-            logoTxt: "MGM",
-            alt: "MGM_LOGO"
-        }
-    ]);
+app.get("/about", (req, res, next) => {
+    setTimeout(() => {
+        res.json({
+            self: {
+                nextHashTags: " #javascript ",
+                studyingInYear: "3<sup>rd</sup>",
+                workingIn: "Shivankit TechSolutions",
+                workingAs: "Web Developer intern",
+                beComplete: false
+            },
+            education: [
+                {
+                    id: "pict",
+                    logo: "/media/pictLogo.png",
+                    clg: "SCTR's Pune Institute Of Computer Technology, Pune",
+                    link: "https://pict.edu",
+                    courseDetail: "(B.E)",
+                    branch: "Information Technology",
+                    from: "2021",
+                    to: "2024",
+                    status: "pursuing",
+                    grade: "",
+                    logoTxt: "PICT",
+                    alt: "PICT_LOGO"
+                },
+                {
+                    id: "vpp",
+                    logo: "/media/vppLogo.png",
+                    clg: "Vidya Prathishthan's Polytechnic College, Indapur",
+                    link: "https://www.vppolytechnic.org",
+                    courseDetail: "(MSBTE)",
+                    branch: "Computer Engineering",
+                    from: "2018",
+                    to: "2021",
+                    status: "completed",
+                    grade: "95.43%",
+                    logoTxt: "VPP",
+                    alt: "VPP_LOGO"
+                },
+                {
+                    id: "mgm",
+                    logo: "/media/mgmLogo.png",
+                    clg: "Mahatma Gandhi Vidyalay, Paranda, Osmanabad",
+                    link: "#",
+                    courseDetail: "(SSC)",
+                    branch: "10th",
+                    from: "2015",
+                    to: "2018",
+                    status: "completed",
+                    grade: "73%",
+                    logoTxt: "MGM",
+                    alt: "MGM_LOGO"
+                }
+            ],
+            currentStatus: {
+
+            }
+        });
+    }, 5000)
 })

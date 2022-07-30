@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 
 import Avatar from '@mui/material/Avatar';
+import parse from 'html-react-parser';
+import LinearProgress from '@mui/material/LinearProgress';
+
+import { AboutDataContext } from '../../App0'
 
 function stringToColor(string) {
     let hash = 0;
@@ -34,42 +38,41 @@ function stringAvatar(name) {
 const Card = (props) => {
     return <div className="educationCard">
         <span className="avatar">
-            <Avatar
-                {...stringAvatar(props.logoTxt)}
-                alt={props.alt}
-                src={props.logo}
-                style={{ background: "#f7df1e", fontWeight: "bold", color: "#323330" }}
-                sx={{ width: 80, height: 80 }}
-            />
+            <a href={props.link}>
+                <Avatar
+                    {...stringAvatar(props.logoTxt)}
+                    alt={props.alt}
+                    src={props.logo}
+                    style={{ background: "#f7df1e", fontWeight: "bold", color: "#323330" }}
+                    sx={{ width: 80, height: 80 }}
+                />
+            </a>
         </span>
         <div>
-            <h2>{props.clg}</h2>
+            <h2><a href={props.link}>{parse(props.clg)}</a></h2>
             <h3>{props.courseDetail} in <strong>{props.branch}</strong></h3>
             <p className="date">
                 {props.from} - {props.to}
             </p>
             <p className="other">
                 <i>{props.status} </i>
-                <b>{props.grade && ` with ${props.grade} `}</b>
+                {props.grade && parse(` with <b> ${props.grade} </b>`)}
             </p>
         </div>
     </div>
 }
 
 const Education = () => {
-    const [data, updateData] = useState([])
-    useEffect(() => {
-        fetch("http://localhost:3030/education")
-            .then(d => d.json())
-            .then(d => { console.log(d); updateData(d); })
-            .catch(e => console.warn(e))
-    }, [])
+
+    let educationData = useContext(AboutDataContext)
+    // console.warn(educationData)
 
     return <div id='education'>
         {
-            data.map((v) => {
+            educationData ? educationData.map((v) => {
                 return <Card
                     clg={v.clg}
+                    link={v.link}
                     courseDetail={v.courseDetail}
                     branch={v.branch}
                     from={v.from}
@@ -80,7 +83,9 @@ const Education = () => {
                     logoTxt={v.logoTxt}
                     alt={v.alt}
                 />
-            })
+            }) : <>
+                <LinearProgress />
+            </>
         }
     </div>
 }

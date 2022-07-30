@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import "../App0Style/About.css"
 import SKme from "../media/SKme.jpg"
@@ -9,9 +9,13 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+//////////////////////////////////////
+
+import { AboutDataContext } from '../App0'
 
 import AboutSelf from './AboutComponents/Self'
 import Education from './AboutComponents/Education'
+import Skills from './AboutComponents/Skills';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -55,6 +59,8 @@ let About = () => {
         setValue(newValue);
     };
 
+    let aboutData = useContext(AboutDataContext)
+
     return <div id="aboutParent" style={{ paddingTop: "80px" }}>
         <h1>About my <span></span><span></span></h1>
         <div id="about">
@@ -70,16 +76,20 @@ let About = () => {
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
-                    <AboutSelf />
+                    <AboutDataContext.Provider value={aboutData.self}>
+                        <AboutSelf />
+                    </AboutDataContext.Provider>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <Education />
+                    <AboutDataContext.Provider value={aboutData.education}>
+                        <Education />
+                    </AboutDataContext.Provider>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     Current Status
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                    Skills
+                    <Skills />
                 </TabPanel>
                 <TabPanel value={value} index={4}>
                     Experience
