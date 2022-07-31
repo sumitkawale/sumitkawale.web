@@ -15,7 +15,7 @@
 #aboutParent h1::before {
     content         : "";
     background-color: #f7df1e;
-    height          : 2px;
+    height          : 3px;
     position        : absolute;
     left            : 20%;
     right           : 60%;
@@ -53,6 +53,19 @@
 #about .aboutTabs {
     width : 60vw;
     margin: 30px 0;
+}
+
+
+@media (max-width:600px) {
+    #aboutParent h1::before {
+        left : 5%;
+        right: 75%;
+    }
+
+    #aboutParent h1::after {
+        left : 75%;
+        right: 5%;
+    }
 }
 
 /* ///////////////////////////////////self - start/////////////////////////////////// */

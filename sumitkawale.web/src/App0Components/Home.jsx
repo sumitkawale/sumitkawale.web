@@ -14,11 +14,20 @@ window.addEventListener("load", (e) => {
     elements.forEach(element => {
         const letters = element.innerHTML.split("")
         element.innerHTML = ""
-        letters.map(l => {
+        let word = document.createElement("div")
+        letters.map((l, i) => {
             let span = document.createElement("span")
             span.className = "animateLetter animate"
             span.innerHTML = l == " " ? "&nbsp" : l
-            element.appendChild(span)
+            word.appendChild(span)
+            console.log("ok")
+            if (l == " ") {
+                element.appendChild(word)
+                word = document.createElement("div")
+            }
+            if (i == letters.length - 1) {
+                element.appendChild(word)
+            }
         })
     });
 })
@@ -28,7 +37,7 @@ const Home = () => {
         <div className="text">
             <h2 className="animateText">Hi, I'm Sumit,</h2>
             <h3 className="animateText">I'm web developer</h3>
-            <h4 className="animateText">I design & code passionately and I love what I do.</h4>{/* I design & code beautifully simple things and love what I do. */}
+            <h4 className="animateText">I design and code passionately and I love what I do.</h4>{/* I design & code beautifully simple things and love what I do. */}
             <div className="socialMedia">
                 <a href="https://github.com/sumitkawale" target={"_blank"} rel="noreferrer">
                     <img className="animateLetter animate" src={github} alt="github_icon" />
