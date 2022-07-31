@@ -18,16 +18,17 @@ window.addEventListener("load", (e) => {
         letters.map((l, i) => {
             let span = document.createElement("span")
             span.className = "animateLetter animate"
-            span.innerHTML = l == " " ? "&nbsp" : l
+            span.innerHTML = l === " " ? "&nbsp" : l
             word.appendChild(span)
             console.log("ok")
-            if (l == " ") {
+            if (l === " ") {
                 element.appendChild(word)
                 word = document.createElement("div")
             }
-            if (i == letters.length - 1) {
+            if (i === letters.length - 1) {
                 element.appendChild(word)
             }
+            return "";
         })
     });
 })
